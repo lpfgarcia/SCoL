@@ -36,3 +36,11 @@ complexity(Species ~ ., iris, features="F2")
 ## Developer notes
 
 To submit bugs and feature requests, report at [project issues](https://github.com/lpfgarcia/SCoL/issues).
+
+## References
+
+[1] Rivolli, A., Garcia, L. P. F., Soares, C., Vanschoren, J., and de Carvalho, A. C. P. L. F. (2018). Towards Reproducible Empirical Research in Meta-Learning. arXiv:1808.10406
+
+[2] Ho, T., and Basu, M. (2002). Complexity measures of supervised classification problems. IEEE Transactions on Pattern Analysis and Machine Intelligence, 24(3):289-300.
+
+[3] Lorena, A. C., Garcia, L. P. F., Lehmann, J., de Souto, M. C. P., and Ho, T. K. (2018). How Complex is your classification problem? A survey on measuring classification complexity. arXiv:1808.03591
