@@ -73,9 +73,9 @@ simulated.default <- function(x, y, features="all", ...) {
   loadNamespace("randomForest")
 
   measures <- imputation(mfe::metafeatures(x, y))
-  sapply(features, function(f) {
+  unlist(sapply(features, function(f) {
     as.numeric(stats::predict(get(f), measures))
-  }, simplify=FALSE)
+  }, simplify=FALSE))
 }
 
 #' @rdname simulated
