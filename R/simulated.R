@@ -15,14 +15,18 @@
 #' @details
 #'  The following features are allowed for this method:
 #'  \describe{
+#'    \item{"F1"}{}
+#'    \item{"F1v"}{}
 #'    \item{"F2"}{}
 #'    \item{"F3"}{}
 #'    \item{"F4"}{}
 #'    \item{"N1"}{}
+#'    \item{"N2"}{}
 #'    \item{"N3"}{}
 #'    \item{"N4"}{}
 #'    \item{"T1"}{}
 #'    \item{"LSC"}{}
+#'    \item{"L1"}{}
 #'    \item{"L2"}{}
 #'    \item{"L3"}{}
 #'    \item{"Density"}{}
@@ -103,8 +107,8 @@ simulated.formula <- function(formula, data, features="all", ...) {
 #' @examples
 #' ls.simulated()
 ls.simulated <- function() {
-  c("F2", "F3", "F4", "N1", "N3", "N4", "T1", "LSC", "L2", "L3", "Density", 
-    "ClsCoef", "Hubs")
+  c("F1", "F1v", "F2", "F3", "F4", "N1", "N2", "N3", "N4", "T1", "LSC", "L1", 
+    "L2", "L3", "Density", "ClsCoef", "Hubs")
 }
 
 ls.simulated.multiples <- function() {
