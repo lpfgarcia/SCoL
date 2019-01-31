@@ -37,19 +37,74 @@ the boundary separating the classes.
 \details{
 The following features are allowed for this method:
  \describe{
-   \item{"F2"}{}
-   \item{"F3"}{}
-   \item{"F4"}{}
-   \item{"N1"}{}
-   \item{"N3"}{}
-   \item{"N4"}{}
-   \item{"T1"}{}
-   \item{"LSC"}{}
-   \item{"L2"}{}
-   \item{"L3"}{}
-   \item{"Density"}{}
-   \item{"ClsCoef"}{}
-   \item{"Hubs"}{}
+   \item{"F1"}{Maximum Fisher's Discriminant Ratio (F1) measures the overlap 
+     between the values of the features and takes the value of the largest 
+     discriminant ratio among all the available features.}
+   \item{"F1v"}{Directional-vector maximum Fisher's discriminant ratio (F1v)
+     complements F1 by searching for a vector able to separate two classes 
+     after the training examples have been projected into it.}
+   \item{"F2"}{Volume of the overlapping region (F2) computes the overlap of 
+     the distributions of the features values within the classes. F2 can be 
+     determined by finding, for each feature its minimum and maximum values 
+     in the classes.}
+   \item{"F3"}{The maximum individual feature efficiency (F3) of each 
+     feature is given by the ratio between the number of examples that are 
+     not in the overlapping region of two classes and the total number of 
+     examples. This measure returns the maximum of the values found among 
+     the input features.}
+   \item{"F4"}{Collective feature efficiency (F4) get an overview on how 
+     various features may work together in data separation. First the most 
+     discriminative feature according to F3 is selected and all examples that
+     can be separated by this feature are removed from the dataset. The 
+     previous step is repeated on the remaining dataset until all the 
+     features have been considered or no example remains. F4 returns the 
+     ratio of examples that have been discriminated.}
+   \item{"N1"}{Fraction of borderline points (N1) computes the percentage of 
+     vertexes incident to edges connecting examples of opposite classes in 
+     a Minimum Spanning Tree (MST).}
+   \item{"N2"}{Ratio of intra/extra class nearest neighbor distance (N2)  
+     computes the ratio of two sums: intra-class and inter-class. The former 
+     corresponds to the sum of the distances between each example and its 
+     closest neighbor from the same class. The later is the sum of the 
+     distances between each example and its closest neighbor from another 
+     class (nearest enemy).}
+   \item{"N3"}{Error rate of the nearest neighbor (N3) classifier corresponds
+     to the error rate of a one Nearest Neighbor (1NN) classifier, estimated 
+     using a leave-one-out procedure in dataset.}
+   \item{"N4"}{Non-linearity of the nearest neighbor classifier (N4) creates 
+     a new dataset randomly interpolating pairs of training examples of the 
+     same class and then induce a the 1NN classifier on the original data and
+     measure the error rate in the new data points.}
+   \item{"T1"}{Fraction of hyperspheres covering data (T1) builds 
+     hyperspheres centered at each one of the training examples, which have 
+     their radios growth until the hypersphere reaches an example of another 
+     class. Afterwards, smaller hyperspheres contained in larger hyperspheres 
+     are eliminated. T1 is finally defined as the ratio between the number of 
+     the remaining hyperspheres and the total number of examples in the 
+     dataset.}
+   \item{"LSC"}{Local Set Average Cardinality (LSC) is based on Local Set 
+     (LS) and defined as the set of points from the dataset whose distance of
+     each example is smaller than the distance from the exemples of the 
+     different class. LSC is the average of the LS.}
+   \item{"L1"}{Sum of the error distance by linear programming (L1) computes 
+     the sum of the distances of incorrectly classified examples to a linear 
+     boundary used in their classification.}
+   \item{"L2"}{Error rate of linear classifier (L2) computes the error rate 
+     of the linear SVM classifier induced from dataset.}
+   \item{"L3"}{Non-linearity of a linear classifier (L3) creates a new 
+     dataset randomly interpolating pairs of training examples of the same 
+     class and then induce a linear SVM on the original data and measure 
+     the error rate in the new data points.}
+   \item{"Density"}{Average Density of the network (Density) represents the 
+     number of edges in the graph, divided by the maximum number of edges 
+     between pairs of data points.}
+   \item{"ClsCoef"}{Clustering coefficient (ClsCoef) averages the clustering 
+     tendency of the vertexes by the ratio of existent edges between its 
+     neighbors and the total number of edges that could possibly exist 
+     between them.}
+   \item{"Hubs"}{Hubs score (Hubs) is given by the number of connections it  
+     has to other nodes, weighted by the number of connections these 
+     neighbors have.}
  }
 }
 \examples{
