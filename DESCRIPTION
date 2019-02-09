@@ -11,14 +11,15 @@ Description: The Simulated Complexity Library simulates a set of complexity
     package. The measures are described in the paper Lorena et al. (2018) 
     <doi:10.1007/s10994-017-5681-1>.
 Author: Luis Garcia [aut, cre],
+  Adriano Rivolli [aut, ctb],
   Edesio Alcobaca [aut, ctb],
-  Adriano Rivolli [aut, ctb]
-Maintainer: Luis Garcia <lpgarcia@icmc.usp.br>
+  Ana Lorena [aut, ctb],
+  Andre de Carvalho [aut, ctb]
+Maintainer: Luis Garcia <lpfgarcia@icmc.usp.br>
 URL: https://github.com/lpfgarcia/SCoL/
 Depends:
   R (>= 3.3),
 Imports:
-  e1071,
   mfe,
   randomForest
 License: MIT + file LICENSE
